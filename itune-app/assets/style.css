@@ -1,0 +1,62 @@
+body {
+  height: 100%;
+  background: url("image/bg.jpeg")  no-repeat center center fixed;
+  background-size: cover;
+}
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th {
+  cursor: pointer;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  width: 35%;
+}
+.default-msg {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+.wrapper{
+    margin-left: 10em;
+    margin-right: 10em;
+    border: 1px dashed aquamarine;
+    background: #f8f4f4e6;    
+    min-height: calc(100vh);
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 0 15px;
+}
+.container h3::first-letter{
+     color: #cd6465;
+
+}
+.default-msg h3{
+    text-align: center;
+}
+input[type="text" i] {
+    padding: 1px 8px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sort a HTML Table Alphabetically</title>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl" class="wrapper">
+    <div header class="container">
+      <h3>
+        iTune</h3>
+      <input type="text" id="myInput" ng-keyup="searchFunction()" ng-model="searchStr" placeholder="Search here..">
+    </div>
+    <div ng-if="searchStr">
+      <table id="myTable">
+        <tr>
+          <th ng-click="sortTable(0)">Track List</th>
+          <th ng-click="sortTable(1)">Album</th>
+          <th ng-click="sortTable(1)">Artist</th>
+        </tr>
+        <tr ng-repeat="item in tuneDataList | filter :filter2">
+          <td>{{item.trackName}}</td>
+          <td>{{item.collectionName}}</td>
+          <td>{{item.artistName}}</td>
+        </tr>
+
+      </table>
+    </div>
+    <div ng-if="!searchStr" class="default-msg">
+      <h3>Welcome To iTune</h3>
+      Please search Song, Artist or Album Name
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="src/index.js" charset="utf-8"></script>
+  <script src="src/service.js" charset="utf-8"></script>
+
+</body>
+
+</html>
